@@ -5,14 +5,25 @@ void loop_menu(struct SinhVien danh_sach_lop[], int *p_so_luong_sv) {
   int g_select = 2007; // random :))
 
   while (g_select) {
-    system("cls");
+    CLEAR_SCREEN();
+    printf("==========================================\n");
+    printf("   CHUONG TRINH QUAN LY SINH VIEN\n");
+    printf("==========================================\n");
     printf("1. Nhap danh sach sinh vien\n");
     printf("2. Xuat danh sach sinh vien\n");
     printf("3. In sinh vien nho tuoi nhat\n");
     printf("4. In sinh vien sinh truoc nam x\n");
     printf("5. Sap sep sinh vien theo ten\n");
     printf("0. Thoat\n");
-    scanf("%i", &g_select);
+    printf("------------------------------------------\n");
+    printf("Lua chon cua ban: ");
+    
+    if (scanf("%i", &g_select) != 1) {
+        // Xu ly neu nguoi dung nhap chu cai thay vi so
+        scanf("%*s"); 
+        g_select = 2007;
+        continue;
+    }
 
     switch (g_select) {
     case 1:
@@ -20,18 +31,28 @@ void loop_menu(struct SinhVien danh_sach_lop[], int *p_so_luong_sv) {
       break;
     case 2:
       xuat_danh_sach_sv(danh_sach_lop, *p_so_luong_sv);
+      printf("\nBam phim bat ky de tiep tuc...");
+      getchar(); getchar();
       break;
     case 3:
       in_sv_nho_tuoi_nhat(danh_sach_lop, *p_so_luong_sv);
+      printf("\nBam phim bat ky de tiep tuc...");
+      getchar(); getchar();
       break;
     case 4:
       in_sv_sinh_truoc_nam(danh_sach_lop, *p_so_luong_sv);
+      printf("\nBam phim bat ky de tiep tuc...");
+      getchar(); getchar();
       break;
     case 5:
       sap_sep_sv_theo_ten(danh_sach_lop, *p_so_luong_sv);
+      printf("\nBam phim bat ky de tiep tuc...");
+      getchar(); getchar();
       break;
+    case 0:
+      printf("\nTam biet!\n");
+      exit(0);
     default:
-      system("cls"); // Xoá text ở terminal
       continue;
     }
 
