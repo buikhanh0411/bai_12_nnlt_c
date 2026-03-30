@@ -4,12 +4,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Macro tu dong check OS de xoa man hinh
-#ifdef _WIN32
-    #define CLEAR_SCREEN() system("cls")
-#else
-    #define CLEAR_SCREEN() system("clear")
-#endif
+// Cach xoa man hinh dung mã ANSI (Chay duoc ca Windows 10/11, Linux, MacOS)
+// \e[1;1H: dua con tro ve goc tren ben trai
+// \e[2J: xoa toan bo man hinh
+#define CLEAR_SCREEN() printf("\033[H\033[J")
 
 struct SinhVien {
   char ma_sinhvien[20];
