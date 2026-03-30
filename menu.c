@@ -1,8 +1,9 @@
 #include "main.h"
+#include <stdio.h>
 
 
 void loop_menu(struct SinhVien danh_sach_lop[],int *p_so_luong_sv){
-    int g_select; //random :))
+    int g_select = 2007; //random :))
     
     while (g_select){
         system("cls"); 
