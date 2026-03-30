@@ -34,5 +34,7 @@ void loop_menu(struct SinhVien danh_sach_lop[], int *p_so_luong_sv) {
       system("cls"); // Xoá text ở terminal
       continue;
     }
+
+    g_select = 2007; //reset
   };
 }
