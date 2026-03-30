@@ -2,7 +2,7 @@
 
 
 void loop_menu(struct SinhVien danh_sach_lop[],int *p_so_luong_sv){
-    int g_select = 666; //random :))
+    int g_select; //random :))
     
     while (g_select){
         system("cls"); 
