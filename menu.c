@@ -32,7 +32,7 @@ void loop_menu(struct SinhVien danh_sach_lop[],int *p_so_luong_sv){
               sap_sep_sv_theo_ten(danh_sach_lop,*p_so_luong_sv);
               break;
             default:
-               system("cls");
+               system("cls"); //Xoá text ở terminal
                continue;
         }
     };
