@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cmake",
+            "request": "launch",
+            "name": "CMake: Script debugging",
+            "cmakeDebugType": "script",
+            "scriptPath": "${workspaceFolder}/<...>.cmake"
+        },
+        {
+            "name": "CMake: CMake Script",
+            "type": "cmake",
+            "request": "launch",
+            "cmakeDebugType": "script",
+            "scriptPath": "${file}"
+        }
+    ]
+}
