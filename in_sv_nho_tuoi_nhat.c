@@ -2,10 +2,13 @@
 
 void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
 {
-  printf("in so luong sinh vien");
 
   // Copy mang sinh vien (tranh anh huong vao mang chinh)
   struct SinhVien cp_danh_sach_lop[p_so_luong_sv];
+
+  int count = 0;
+  struct SinhVien ans_danh_sach_lop[p_so_luong_sv];
+
   for (int i = 0; i < p_so_luong_sv; i++)
   {
     copy_sinh_vien(&cp_danh_sach_lop[i], danh_sach_lop[i]);
@@ -27,7 +30,17 @@ void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
   {
     if (cp_danh_sach_lop[i].namsinh_sinhvien == max)
     {
-      in_sinh_vien(cp_danh_sach_lop[i], -1);
+      ans_danh_sach_lop[count] = cp_danh_sach_lop[i];
+      count++;
     }
+  }
+
+  if (count == 0)
+  {
+    printf("Khong co sinh vien nao!\n");
+  }
+  else
+  {
+    in_danh_sach_sv(ans_danh_sach_lop, count);
   }
 }
