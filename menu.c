@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
-void loop_menu(struct SinhVien danh_sach_lop[], int *p_so_luong_sv)
+void loop_menu(struct SinhVien danh_sach_sv[], int *p_so_luong_sv)
 {
   int g_select = 2007; // random :))
 
@@ -31,28 +31,28 @@ void loop_menu(struct SinhVien danh_sach_lop[], int *p_so_luong_sv)
     switch (g_select)
     {
     case 1:
-      nhap_danh_sach_sv(danh_sach_lop, p_so_luong_sv);
+      nhap_danh_sach_sv(danh_sach_sv, p_so_luong_sv);
       break;
     case 2:
-      xuat_danh_sach_sv(danh_sach_lop, *p_so_luong_sv);
+      xuat_danh_sach_sv(danh_sach_sv, *p_so_luong_sv);
       printf("\nBam phim bat ky de tiep tuc...");
       getchar();
       getchar();
       break;
     case 3:
-      in_sv_nho_tuoi_nhat(danh_sach_lop, *p_so_luong_sv);
+      in_sv_nho_tuoi_nhat(danh_sach_sv, *p_so_luong_sv);
       printf("\nBam phim bat ky de tiep tuc...");
       getchar();
       getchar();
       break;
     case 4:
-      in_sv_sinh_truoc_nam(danh_sach_lop, *p_so_luong_sv);
+      in_sv_sinh_truoc_nam(danh_sach_sv, *p_so_luong_sv);
       printf("\nBam phim bat ky de tiep tuc...");
       getchar();
       getchar();
       break;
     case 5:
-      sap_sep_sv_theo_ten(danh_sach_lop, *p_so_luong_sv);
+      sap_sep_sv_theo_ten(danh_sach_sv, *p_so_luong_sv);
       printf("\nBam phim bat ky de tiep tuc...");
       getchar();
       getchar();

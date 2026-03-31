@@ -1,4 +1,4 @@
-#include "main.h"
+#include "utils.h"
 
 void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
 {
@@ -8,7 +8,7 @@ void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
   struct SinhVien cp_danh_sach_lop[p_so_luong_sv];
   for (int i = 0; i < p_so_luong_sv; i++)
   {
-    cp_danh_sach_lop[i] = danh_sach_lop[i];
+    copy_sinh_vien(&cp_danh_sach_lop[i], danh_sach_lop[i]);
   }
 
   int max = cp_danh_sach_lop[0].namsinh_sinhvien;
@@ -27,12 +27,7 @@ void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
   {
     if (cp_danh_sach_lop[i].namsinh_sinhvien == max)
     {
-      printf(
-          "%s %s %s %d\n",
-          cp_danh_sach_lop[i].ma_sinhvien,
-          cp_danh_sach_lop[i].hodem_sinhvien,
-          cp_danh_sach_lop[i].ten_sinhvien,
-          cp_danh_sach_lop[i].namsinh_sinhvien);
+      in_sinh_vien(cp_danh_sach_lop[i], -1);
     }
   }
 }

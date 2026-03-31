@@ -1,6 +1,6 @@
-#include "main.h"
+#include "utils.h"
 
-void nhap_danh_sach_sv(struct SinhVien danh_sach_lop[], int *p_so_luong_sv)
+void nhap_danh_sach_sv(struct SinhVien danh_sach_sv[], int *p_so_luong_sv)
 {
   int n;
   CLEAR_SCREEN();
@@ -15,17 +15,17 @@ void nhap_danh_sach_sv(struct SinhVien danh_sach_lop[], int *p_so_luong_sv)
     printf("\n[ Sinh vien thu %d ]\n", (*p_so_luong_sv) + 1);
 
     printf(" + Ma sinh vien: ");
-    scanf("%s", danh_sach_lop[*p_so_luong_sv].ma_sinhvien);
+    scanf("%s", danh_sach_sv[*p_so_luong_sv].ma_sinhvien);
 
     printf(" + Ho va ten dem: ");
     // Dung " %[^ \n]" de bo qua ky tu xuong dong va nhap ca chuoi
-    scanf(" %[^\n]", danh_sach_lop[*p_so_luong_sv].hodem_sinhvien);
+    scanf(" %[^\n]", danh_sach_sv[*p_so_luong_sv].hodem_sinhvien);
 
     printf(" + Ten: ");
-    scanf("%s", danh_sach_lop[*p_so_luong_sv].ten_sinhvien);
+    scanf("%s", danh_sach_sv[*p_so_luong_sv].ten_sinhvien);
 
     printf(" + Nam sinh: ");
-    scanf("%d", &danh_sach_lop[*p_so_luong_sv].namsinh_sinhvien);
+    scanf("%d", &danh_sach_sv[*p_so_luong_sv].namsinh_sinhvien);
 
     (*p_so_luong_sv)++;
   }
@@ -39,12 +39,12 @@ void nhap_danh_sach_sv(struct SinhVien danh_sach_lop[], int *p_so_luong_sv)
   {
     for (int j = i + 1; j < *p_so_luong_sv; j++)
     {
-      if (strcmp(danh_sach_lop[i].ma_sinhvien, danh_sach_lop[j].ma_sinhvien) >
+      if (strcmp(danh_sach_sv[i].ma_sinhvien, danh_sach_sv[j].ma_sinhvien) >
           0)
       {
-        struct SinhVien temp = danh_sach_lop[i];
-        danh_sach_lop[i] = danh_sach_lop[j];
-        danh_sach_lop[j] = temp;
+        struct SinhVien temp = danh_sach_sv[i];
+        danh_sach_sv[i] = danh_sach_sv[j];
+        danh_sach_sv[j] = temp;
       }
     }
   }
