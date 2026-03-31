@@ -1,6 +1,7 @@
 #include "main.h"
 
-void nhap_danh_sach_sv(struct SinhVien danh_sach_lop[], int *p_so_luong_sv) {
+void nhap_danh_sach_sv(struct SinhVien danh_sach_lop[], int *p_so_luong_sv)
+{
   int n;
   CLEAR_SCREEN();
   printf("==========================================\n");
@@ -9,7 +10,8 @@ void nhap_danh_sach_sv(struct SinhVien danh_sach_lop[], int *p_so_luong_sv) {
   printf("Nhap so luong sinh vien can them: ");
   scanf("%d", &n);
 
-  for (int i = 0; i < n; i++) {
+  for (int i = 0; i < n; i++)
+  {
     printf("\n[ Sinh vien thu %d ]\n", (*p_so_luong_sv) + 1);
 
     printf(" + Ma sinh vien: ");
@@ -32,11 +34,14 @@ void nhap_danh_sach_sv(struct SinhVien danh_sach_lop[], int *p_so_luong_sv) {
   getchar();
   getchar(); // Dung 2 lan de cho nguoi dung nhan phim
 
-  //sort
-  for (int i = 0; i < *p_so_luong_sv - 1; i++) {
-    for (int j = i + 1; j < *p_so_luong_sv; j++) {
+  // sort
+  for (int i = 0; i < *p_so_luong_sv - 1; i++)
+  {
+    for (int j = i + 1; j < *p_so_luong_sv; j++)
+    {
       if (strcmp(danh_sach_lop[i].ma_sinhvien, danh_sach_lop[j].ma_sinhvien) >
-          0) {
+          0)
+      {
         struct SinhVien temp = danh_sach_lop[i];
         danh_sach_lop[i] = danh_sach_lop[j];
         danh_sach_lop[j] = temp;

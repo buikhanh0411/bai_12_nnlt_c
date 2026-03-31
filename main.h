@@ -9,7 +9,8 @@
 // \e[2J: xoa toan bo man hinh
 #define CLEAR_SCREEN() printf("\033[H\033[J")
 
-struct SinhVien {
+struct SinhVien
+{
   char ma_sinhvien[20];
   char hodem_sinhvien[20];
   char ten_sinhvien[20];

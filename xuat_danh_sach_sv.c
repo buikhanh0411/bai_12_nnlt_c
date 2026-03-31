@@ -1,7 +1,9 @@
 #include "main.h"
 
-void xuat_danh_sach_sv(struct SinhVien danh_sach_lop[], int p_so_luong_sv) {
-    if (p_so_luong_sv == 0) {
+void xuat_danh_sach_sv(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
+{
+    if (p_so_luong_sv == 0)
+    {
         printf("\n[!] Danh sach dang trong. Hay nhap sinh vien truoc!\n");
         return;
     }
@@ -11,7 +13,8 @@ void xuat_danh_sach_sv(struct SinhVien danh_sach_lop[], int p_so_luong_sv) {
     printf("| STT | Ma SV      | Ho Dem                    | Ten            | Nam Sinh |\n");
     printf("+-----+------------+---------------------------+----------------+----------+\n");
 
-    for (int i = 0; i < p_so_luong_sv; i++) {
+    for (int i = 0; i < p_so_luong_sv; i++)
+    {
         printf("| %-3d | %-10s | %-25s | %-14s | %-8d |\n",
                i + 1,
                danh_sach_lop[i].ma_sinhvien,
