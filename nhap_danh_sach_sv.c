@@ -126,4 +126,8 @@ void nhap_danh_sach_sv(struct SinhVien danh_sach_sv[], int *p_so_luong_sv)
       }
     }
   }
+
+  //Output
+  printf("\nDanh sach sinh vien da nhap:\n");
+  in_danh_sach_sv(danh_sach_sv, *p_so_luong_sv);
 }
