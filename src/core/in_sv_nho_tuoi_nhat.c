@@ -1,4 +1,4 @@
-#include "utils.h"
+#include "../utils/utils.h"
 
 void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
 {

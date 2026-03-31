@@ -1,5 +1,5 @@
 #include "main.h"
-#include "utils.h"
+#include "../utils/utils.h"
 
 void sap_xep_sv_theo_ten(struct SinhVien danh_sach_sv[], int p_so_luong_sv)
 {

@@ -1,5 +1,5 @@
 #include "main.h"
-#include "utils.h"
+#include "../utils/utils.h"
 
 void nhap_danh_sach_sv(struct SinhVien danh_sach_sv[], int *p_so_luong_sv)
 {

@@ -18,8 +18,3 @@ void in_danh_sach_sv(struct SinhVien danh_sach[], int so_luong)
     printf("+-----+------------+---------------------------+----------------+----------+\n");
     printf("Tong so: %d sinh vien.\n", so_luong);
 }
-
-void copy_sinh_vien(struct SinhVien *dest, struct SinhVien src)
-{
-    *dest = src;
-}
