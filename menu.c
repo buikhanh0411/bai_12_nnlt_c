@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 void loop_menu(struct SinhVien danh_sach_sv[], int *p_so_luong_sv)
 {
