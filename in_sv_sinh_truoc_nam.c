@@ -1,4 +1,5 @@
 #include "main.h"
+#include "utils.h"
 
 void in_sv_sinh_truoc_nam(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
 {
@@ -24,7 +25,6 @@ void in_sv_sinh_truoc_nam(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
 
     for (int i = 0; i < p_so_luong_sv; i++)
     {
-        printf("%d\n", danh_sach_lop[i].namsinh_sinhvien);
         if (danh_sach_lop[i].namsinh_sinhvien < nam)
         {
             ans_danh_sach_lop[count] = danh_sach_lop[i];
