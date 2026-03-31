@@ -10,6 +10,11 @@ Dự án này là một ứng dụng console đơn giản để quản lý danh 
 - Tìm sinh viên nhỏ tuổi nhất
 - Lọc danh sách sinh viên sinh trước một năm cụ thể (người dùng nhập năm)
 
+## Screenshots
+
+![Main Menu](assets/main.png)
+![Student List](assets/list_student.png)
+
 ## Cách build và chạy
 
 ### Sử dụng CMake (Khuyên dùng):
@@ -42,6 +47,7 @@ gcc src/core/*.c src/utils/*.c -o student_manager
 bai_12_nnlt_c/
 ├── CMakeLists.txt
 ├── README.md
+├── assets/ (thư mục chứa tài nguyên như hình ảnh, diagram)
 ├── build/ (thư mục build)
 ├── src/
 │   ├── core/ (logic chính)
