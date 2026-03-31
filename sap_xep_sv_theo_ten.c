@@ -1,7 +1,7 @@
 #include "main.h"
 #include "utils.h"
 
-void sap_sep_sv_theo_ten(struct SinhVien danh_sach_sv[], int p_so_luong_sv)
+void sap_xep_sv_theo_ten(struct SinhVien danh_sach_sv[], int p_so_luong_sv)
 {
 
   // Copy mang sinh vien (tranh anh huong vao mang chinh)
@@ -27,8 +27,6 @@ void sap_sep_sv_theo_ten(struct SinhVien danh_sach_sv[], int p_so_luong_sv)
     }
   }
 
-  for (int i = 0; i < p_so_luong_sv; i++)
-  {
-    in_sinh_vien(cp_danh_sach_lop[i], -1);
-  }
+  printf("Danh sach sinh vien sau khi sap xep theo ten:\n");
+  in_danh_sach_sv(cp_danh_sach_lop, p_so_luong_sv);
 }

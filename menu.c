@@ -51,7 +51,7 @@ void loop_menu(struct SinhVien danh_sach_sv[], int *p_so_luong_sv)
       getchar();
       break;
     case 5:
-      sap_sep_sv_theo_ten(danh_sach_sv, *p_so_luong_sv);
+      sap_xep_sv_theo_ten(danh_sach_sv, *p_so_luong_sv);
       printf("\nBam phim bat ky de tiep tuc...");
       getchar();
       getchar();
