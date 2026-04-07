@@ -22,7 +22,7 @@ void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
     {
       max = cp_danh_sach_lop[i].namsinh_sinhvien;
     }
-  }
+  };
 
   printf("\nSinh vien nho tuoi nhat:\n");
 
@@ -33,7 +33,7 @@ void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
       ans_danh_sach_lop[count] = cp_danh_sach_lop[i];
       count++;
     }
-  }
+  };
 
   if (count == 0)
   {
