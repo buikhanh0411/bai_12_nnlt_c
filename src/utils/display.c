@@ -2,9 +2,9 @@
 
 void in_danh_sach_sv(struct SinhVien danh_sach[], int so_luong)
 {
-    printf("+-----+------------+---------------------------+----------------+----------+\n");
+    printf("----------------------------------------------------------------------------\n");
     printf("| STT | Ma SV      | Ho Dem                    | Ten            | Nam Sinh |\n");
-    printf("+-----+------------+---------------------------+----------------+----------+\n");
+    printf("----------------------------------------------------------------------------\n");
 
     for (int i = 0; i < so_luong; i++)
     {
@@ -15,6 +15,6 @@ void in_danh_sach_sv(struct SinhVien danh_sach[], int so_luong)
                danh_sach[i].ten_sinhvien,
                danh_sach[i].namsinh_sinhvien);
     }
-    printf("+-----+------------+---------------------------+----------------+----------+\n");
+    printf("----------------------------------------------------------------------------\n");
     printf("Tong so: %d sinh vien.\n", so_luong);
 }
