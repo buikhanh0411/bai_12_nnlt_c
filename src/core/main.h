@@ -21,3 +21,4 @@ void xuat_danh_sach_sv(struct SinhVien danh_sach_sv[], int p_so_luong_sv);
 void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_sv[], int p_so_luong_sv);
 void in_sv_sinh_truoc_nam(struct SinhVien danh_sach_sv[], int p_so_luong_sv);
 void sap_xep_sv_theo_ten(struct SinhVien danh_sach_sv[], int p_so_luong_sv);
+void xoa_toan_bo_danh_sach_sinh_vien(struct SinhVien danh_sach_sv,int *p_so_luong_sv)

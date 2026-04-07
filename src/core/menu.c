@@ -15,6 +15,7 @@ void loop_menu(struct SinhVien danh_sach_sv[], int *p_so_luong_sv)
     printf("3. In sinh vien nho tuoi nhat\n");
     printf("4. In sinh vien sinh truoc nam x\n");
     printf("5. Sap sep sinh vien theo ten\n");
+    printf("6. Xoa toan bo danh sach dinh vien")
     printf("0. Thoat\n");
     printf("------------------------------------------\n");
     printf("Lua chon cua ban: ");
@@ -52,6 +53,12 @@ void loop_menu(struct SinhVien danh_sach_sv[], int *p_so_luong_sv)
       break;
     case 5:
       sap_xep_sv_theo_ten(danh_sach_sv, *p_so_luong_sv);
+      printf("\nBam phim bat ky de tiep tuc...");
+      getchar();
+      getchar();
+      break;
+    case 6:
+      xoa_toan_bo_danh_sach_sinh_vien(danh_sach_sv, p_so_luong_sv);
       printf("\nBam phim bat ky de tiep tuc...");
       getchar();
       getchar();
