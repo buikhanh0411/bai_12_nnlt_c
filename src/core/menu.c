@@ -15,7 +15,7 @@ void loop_menu(struct SinhVien danh_sach_sv[], int *p_so_luong_sv)
     printf("3. In sinh vien nho tuoi nhat\n");
     printf("4. In sinh vien sinh truoc nam x\n");
     printf("5. Sap sep sinh vien theo ten\n");
-    printf("6. Xoa toan bo danh sach dinh vien");
+    printf("6. Xoa toan bo danh sach sinh vien");
     printf("0. Thoat\n");
     printf("------------------------------------------\n");
     printf("Lua chon cua ban: ");
