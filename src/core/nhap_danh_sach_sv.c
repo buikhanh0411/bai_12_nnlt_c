@@ -9,7 +9,6 @@ void nhap_danh_sach_sv(struct SinhVien danh_sach_sv[], int *p_so_luong_sv)
   printf("     NHAP DANH SACH SINH VIEN MOI\n");
   printf("==========================================\n");
 
-  //Check condition
   do
   {
     printf("Nhap so luong sinh vien can them: ");
@@ -111,21 +110,6 @@ void nhap_danh_sach_sv(struct SinhVien danh_sach_sv[], int *p_so_luong_sv)
   printf("Nhan Enter de quay lai menu...");
   getchar();
   getchar(); // Dung 2 lan de cho nguoi dung nhan phim
-
-  // sort
-  for (int i = 0; i < *p_so_luong_sv - 1; i++)
-  {
-    for (int j = i + 1; j < *p_so_luong_sv; j++)
-    {
-      if (strcmp(danh_sach_sv[i].ma_sinhvien, danh_sach_sv[j].ma_sinhvien) >
-          0)
-      {
-        struct SinhVien temp = danh_sach_sv[i];
-        danh_sach_sv[i] = danh_sach_sv[j];
-        danh_sach_sv[j] = temp;
-      }
-    }
-  }
 
   //Output
   printf("\nDanh sach sinh vien da nhap:\n");
