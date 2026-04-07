@@ -2,8 +2,8 @@
 
 int main()
 {
-  struct SinhVien danh_sach_lop[50];
+  struct SinhVien danh_sach_sv[50];
   int so_luong = 0;
 
-  loop_menu(danh_sach_lop, &so_luong);
+  loop_menu(danh_sach_sv, &so_luong);
 }

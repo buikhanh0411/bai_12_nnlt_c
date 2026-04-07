@@ -1,19 +1,19 @@
 #include "main.h"
 #include "../utils/utils.h"
 
-void in_sv_sinh_truoc_nam(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
+void in_sv_sinh_truoc_nam(struct SinhVien danh_sach_sv[], int p_so_luong_sv)
 {
     int nam;
 
     // Copy mang sinh vien (tranh anh huong vao mang chinh)
-    struct SinhVien cp_danh_sach_lop[p_so_luong_sv];
+    struct SinhVien cp_danh_sach_sv[p_so_luong_sv];
 
     int count = 0;
-    struct SinhVien ans_danh_sach_lop[p_so_luong_sv];
+    struct SinhVien ans_danh_sach_sv[p_so_luong_sv];
 
     for (int i = 0; i < p_so_luong_sv; i++)
     {
-        copy_sinh_vien(&cp_danh_sach_lop[i], danh_sach_lop[i]);
+        copy_sinh_vien(&cp_danh_sach_sv[i], danh_sach_sv[i]);
     }
 
     printf("\nNhap nam moc: ");
@@ -25,9 +25,9 @@ void in_sv_sinh_truoc_nam(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
 
     for (int i = 0; i < p_so_luong_sv; i++)
     {
-        if (danh_sach_lop[i].namsinh_sinhvien < nam)
+        if (danh_sach_sv[i].namsinh_sinhvien < nam)
         {
-            ans_danh_sach_lop[count] = danh_sach_lop[i];
+            ans_danh_sach_sv[count] = danh_sach_sv[i];
             count++;
             found = 1;
         }
@@ -40,6 +40,6 @@ void in_sv_sinh_truoc_nam(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
     }
     else
     {
-        in_danh_sach_sv(ans_danh_sach_lop, count);
+        in_danh_sach_sv(ans_danh_sach_sv, count);
     }
 }

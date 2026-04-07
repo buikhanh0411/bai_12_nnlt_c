@@ -1,26 +1,26 @@
 #include "../utils/utils.h"
 
-void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
+void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_sv[], int p_so_luong_sv)
 {
 
   // Copy mang sinh vien (tranh anh huong vao mang chinh)
-  struct SinhVien cp_danh_sach_lop[p_so_luong_sv];
+  struct SinhVien cp_danh_sach_sv[p_so_luong_sv];
 
   int count = 0;
-  struct SinhVien ans_danh_sach_lop[p_so_luong_sv];
+  struct SinhVien ans_danh_sach_sv[p_so_luong_sv];
 
   for (int i = 0; i < p_so_luong_sv; i++)
   {
-    copy_sinh_vien(&cp_danh_sach_lop[i], danh_sach_lop[i]);
+    copy_sinh_vien(&cp_danh_sach_sv[i], danh_sach_sv[i]);
   }
 
-  int max = cp_danh_sach_lop[0].namsinh_sinhvien;
+  int max = cp_danh_sach_sv[0].namsinh_sinhvien;
 
   for (int i = 1; i < p_so_luong_sv; i++)
   {
-    if (cp_danh_sach_lop[i].namsinh_sinhvien > max)
+    if (cp_danh_sach_sv[i].namsinh_sinhvien > max)
     {
-      max = cp_danh_sach_lop[i].namsinh_sinhvien;
+      max = cp_danh_sach_sv[i].namsinh_sinhvien;
     }
   };
 
@@ -28,9 +28,9 @@ void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
 
   for (int i = 0; i < p_so_luong_sv; i++)
   {
-    if (cp_danh_sach_lop[i].namsinh_sinhvien == max)
+    if (cp_danh_sach_sv[i].namsinh_sinhvien == max)
     {
-      ans_danh_sach_lop[count] = cp_danh_sach_lop[i];
+      ans_danh_sach_sv[count] = cp_danh_sach_sv[i];
       count++;
     }
   };
@@ -41,6 +41,6 @@ void in_sv_nho_tuoi_nhat(struct SinhVien danh_sach_lop[], int p_so_luong_sv)
   }
   else
   {
-    in_danh_sach_sv(ans_danh_sach_lop, count);
+    in_danh_sach_sv(ans_danh_sach_sv, count);
   }
 }
