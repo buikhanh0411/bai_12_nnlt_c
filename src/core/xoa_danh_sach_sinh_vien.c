@@ -1,6 +1,6 @@
 #include "main.h"
 
-void xoa_toan_bo_danh_sach_sinh_vien(struct SinhVien danh_sach_sv,int *p_so_luong_sv){
+void xoa_toan_bo_danh_sach_sinh_vien(struct SinhVien *danh_sach_sv,int *p_so_luong_sv){
     *p_so_luong_sv = 0;
     for (int i = 0; i < 50; i++)
     {
